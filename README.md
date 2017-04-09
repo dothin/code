@@ -1,2 +1,2 @@
-# code-sprites
+# code
 study、experience、share
