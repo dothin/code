@@ -33,13 +33,16 @@ const UserProfile = {
 const UserPosts = {
     template: '<div>Posts</div>'
 }
+const params = {
+    template: '<div>params {{$route.params.id}}</div>'
+}
 export default new Router({
     routes: [{
         path: '/first',
         name: 'first',
         component: first,
         children: [{
-            path: 'child1',//子路由第一个元素不要加斜杠，如/child1->child1
+            path: 'child1', //子路由第一个元素不要加斜杠，如/child1->child1
             component: firstChild1
         }, {
             path: 'child2',
@@ -49,6 +52,10 @@ export default new Router({
         path: '/second',
         name: 'second',
         component: second
+    }, , {
+        path: '/params',
+        name: 'params',
+        component: params
     }, {
         path: '/user/:id',
         name: 'user',

@@ -19,7 +19,7 @@
         <li><router-link to="/user/foo/profile">/user/foo/profile</router-link></li>
         <li><router-link to="/user/foo/posts">/user/foo/posts</router-link></li>
     </ul>
-    <li><router-link :to="{ name: 'user', params: { id: 'foo' }}">User</router-link></li>
+    <li><router-link :to="{ name: 'params', params: { id: 1 }}">params</router-link></li>
     </ul>
     <router-view></router-view>
   </div>
