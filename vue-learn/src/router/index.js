@@ -52,7 +52,7 @@ export default new Router({
         path: '/second',
         name: 'second',
         component: second
-    }, , {
+    }, {
         path: '/params',
         name: 'params',
         component: params
