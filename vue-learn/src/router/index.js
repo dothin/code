@@ -15,14 +15,10 @@ const User = {
       <h2>User {{ $route.params.id }}</h2>
       <router-view></router-view>
     </div>
-  `,
-    watch: {
-        '$route' (to, from) {
-            // 对路由变化作出响应...
-            console.log(from)
-            console.log(to)
-        }
-    }
+  `
+}
+const query = {
+    template: '<div> {{$route.query.plan}}</div>'
 }
 const UserHome = {
     template: '<div>Home</div>'
@@ -36,7 +32,11 @@ const UserPosts = {
 const params = {
     template: '<div>params {{$route.params.id}}</div>'
 }
+const Page404 = {
+    template: '<div>404</div>'
+}
 export default new Router({
+    mode:'history',
     routes: [{
         path: '/first',
         name: 'first',
@@ -49,6 +49,10 @@ export default new Router({
             component: firstChild2
         }]
     }, {
+        path: '/query',
+        name: 'query',
+        component: query
+    },  {
         path: '/second',
         name: 'second',
         component: second
@@ -70,5 +74,28 @@ export default new Router({
             path: 'posts',
             component: UserPosts
         }]
+    }, {
+        path: '/redirect',
+        name: 'redirect',
+        component: User,
+        redirect:'/second'
+    }, {
+        path: '/redirect1',
+        name: 'redirect1',
+        component: User,
+        redirect:'/user/bar'
+    }, {
+        path: '/redirect2/:id',
+        name: 'redirect2',
+        component: User,
+        redirect:xxxx =>{
+            const {hash, params, query} = xxxx;
+            if(params.id === '001'){
+                return '/params';
+            }
+        }
+    }, {
+        path: '*',//404一定要放到路由最后面
+        component: Page404
     }]
 })
