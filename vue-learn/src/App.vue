@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+        <h1>Hello world</h1>
+        <p>{{$store.state.count}}</p>
 
     <button v-on:click="goBack">后退</button>
     <button @click="goTo">前进</button>
