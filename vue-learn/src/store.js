@@ -2,7 +2,7 @@
 * @Author: dothin
 * @Date:   2017-05-12 23:38:35
 * @Last Modified by:   dothin
-* @Last Modified time: 2017-05-15 02:02:32
+* @Last Modified time: 2017-05-15 23:33:18
 */
 import Vue from 'vue'
 import Vuex from 'vuex'
@@ -29,8 +29,28 @@ const getters = {
     }
 }
 
+const actions = {
+    addAll (context) {
+        context.commit('add', 10)
+        setTimeout(()=>{
+            context.commit('delete',{a:20})
+        },2000)
+    },
+    deleteAll ({commit}) {
+        commit('delete', {a: 10})
+    }
+}
+
+/*const moduleA = {
+    state,
+    mutations,
+    actions,
+    getters
+}*/
+
 export default new Vuex.Store({
     state,
     mutations,
+    actions,
     getters
 })
