@@ -1,7 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import first from '@/components/first'
-import second from '@/components/second'
+const first = r => require.ensure([], () => r(require('../components/first')), 'first')
+const second = r => require.ensure([], () => r(require('../components/second')), 'second')
+
+// const second = resolve => require(['../components/second'], resolve)
+// import first from '@/components/first'
+// import second from '@/components/second'
 Vue.use(Router)
 const firstChild1 = {
     template: '<div>first/child1</div>'
