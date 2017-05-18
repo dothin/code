@@ -7,6 +7,7 @@ module.exports = {
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
+    //如果部署到二级域名，需要改成相对路径'./'
     assetsPublicPath: '/',
     //productionSourceMap设置成false，可以隐藏console里面的webpack
     productionSourceMap: false,
