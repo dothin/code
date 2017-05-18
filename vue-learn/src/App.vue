@@ -62,7 +62,12 @@ export default {
       goParams(){
         this.$router.push({path:'params',params:{name:1}});
       }
-  }
+  },
+    mounted(){
+       this.axios.get('/api/rest').then(function(data){
+         console.log(data)
+       });
+    }
 }
 </script>
 

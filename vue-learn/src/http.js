@@ -1,7 +1,9 @@
-/**
- * Created by superman on 17/2/16.
- * http配置
- */
+/*
+* @Author: dothin
+* @Date:   2017-05-12 23:38:35
+* @Last Modified by:   dothin
+* @Last Modified time: 2017-05-18 22:28:58
+*/
 
 import axios from 'axios'
 
