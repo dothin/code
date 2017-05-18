@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "ansi-styles": "^3.0.0",
+    "axios": "^0.16.1",
     "escape-string-regexp": "^1.0.5",
     "vue": "^2.2.2",
     "vue-router": "^2.3.0",
