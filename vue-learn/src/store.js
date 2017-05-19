@@ -2,7 +2,7 @@
 * @Author: dothin
 * @Date:   2017-05-12 23:38:35
 * @Last Modified by:   dothin
-* @Last Modified time: 2017-05-15 23:33:18
+* @Last Modified time: 2017-05-20 01:54:38
 */
 import Vue from 'vue'
 import Vuex from 'vuex'
@@ -13,7 +13,7 @@ const state = {
     count: 10
 }
 
-//触发状态
+//触发状态，同步
 const mutations = {
     add (state, n=1) {
         state.count += n
@@ -29,6 +29,7 @@ const getters = {
     }
 }
 
+//异步
 const actions = {
     addAll (context) {
         context.commit('add', 10)
