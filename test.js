@@ -5,7 +5,7 @@
  * Time: 17:12
  * To change this template use File | Settings | File Templates.
  */
-console.log(222222)
+console.log(test222)
 angular.module('ngRap', [])
     .provider('ngRap', [function () {
         var provider = this;
