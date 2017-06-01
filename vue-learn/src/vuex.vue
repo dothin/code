@@ -11,6 +11,8 @@
     </div>
 </template>
 
+
+
 <script>
     import { mapState, mapMutations, mapGetters, mapActions } from 'vuex'
 
